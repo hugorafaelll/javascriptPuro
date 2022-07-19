@@ -40,6 +40,13 @@ const rename = programmingLanguage.slice(0,1)
 const script = programmingLanguage.slice(4,5)
 const resume = rename+script;
 
+// COMO DEVERIA TER FEITO 
+const js = programmingLanguage[0]+programmingLanguage[4]
+
+console.log(js)
+
+//como eu fiz 
+
 console.log(resume)
 
 /*
@@ -72,7 +79,17 @@ console.log(resumo2)
 console.log(resumoGeral)
 
 
+//como deveria ter feito 
+const mdn =( mozilla[0]+mozilla[8]+mozilla[18]).toLowerCase()
+console.log(mdn)
+
+
+
 const numbers = mozilla.length
+
+// COMO DEVERIA TER FEITO
+
+console.log(programmingLanguage.length)
 
 console.log(numbers)
 /*
@@ -96,6 +113,12 @@ let randomWord = 'Araponga'
 let test = randomWord.length-1
 
 console.log(test)
+console.log(randomWord[randomWord.length-1])
+
+
+// se colocar o length-1 em uma variavel pega o index 
+// no console.log pega a letra 
+
 
 /*
 09 - Comente o console.log acima, e,
@@ -127,6 +150,7 @@ console.log(resumindo2)
 - Exiba, no console, o index do caractere "v" da "winterMessage";
 */
 
+console.log(winterMessage.indexOf('v '))
 
 
 /*
@@ -161,6 +185,11 @@ const realBestMovie = `E o Oscar de melhor filme vai para: ${theBest}!`
 
 console.log(realBestMovie)
 
+
+/// COMO DEVERIA TER FEITO 
+
+const melhorFilme = bestMovie.replace("La la land" ,'moonLight ' )
+console.log(melhorFilme)
 /*
 15 - Comente o console.log acima, e,
 
@@ -179,15 +208,8 @@ console.log(remind)
 - O valor exibido no console deve ser 7.
 */
 
-let episodes = 6 
-
-/*
-17 - Comente o console.log acima, e,
-
-- Decremente a let "episodes" em 1;
-- Após o decremento, exiba a let "episodes" no console;
-- O valor exibido no console deve ser 6.
-*/
+let episodes = 6;
+console.log(episodes +=1 )
 
 
 
@@ -198,18 +220,20 @@ let episodes = 6
 - Após a atribuição, exiba a let "episodes" no console.
 */
 
-
+console.log(episodes+= 10)
 
 /*
 19 - Comente o console.log acima, e,
 
-- Abaixo deste comentário, armazene a string 'O nº de episódios é: NUMERO_DE_EPISÓDIOS' em uma constante "allEpisodes";
+- Abaixo deste comentário, armazene a string '' em uma constante "allEpisodes";
 - Insira a let "episodes" no lugar de "NUMERO_DE_EPISÓDIOS";
 - Exiba a "allEpisodes" no console.
+
 */
 
+const allEpisodes = `O nº de episódios é: ${episodes}`
 
-
+console.log(allEpisodes)
 /*
 20 - Comente o console.log acima, e,
 
@@ -219,7 +243,8 @@ let episodes = 6
 - Não use template strings.
 */
 
-// const bookMessage = ''O Conto da Aia' é um dos livros mais vendidos da década.'
+// const bookMessage = '\'O Conto da Aia' \ 'é um dos livros mais vendidos da década.'
+
 // console.log(bookMessage)
 
 /*
