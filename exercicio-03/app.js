@@ -11,7 +11,6 @@
 */
 
 
-
 /*
 03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
 
@@ -23,6 +22,12 @@
 */
 
 
+let brazilianFoods = [];
+brazilianFoods.push("coxinha","brigadeiro", null)
+brazilianFoods[2] = "pao de queijo "
+
+console.log(brazilianFoods)
+
 
 /*
 04 - Comente o console.log acima e:
@@ -32,7 +37,8 @@ array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
 
-
+brazilianFoods.push( "pao de queijo")
+console.log(brazilianFoods)
 
 /*
 05 - Comente o console.log acima e:
@@ -46,7 +52,9 @@ número diretamente;
 mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
+const foodInfo =`Ate aqui o array brazilianFoods possui ${brazilianFoods.length} itens : ${brazilianFoods} ` 
 
+console.log(foodInfo)
 
 
 /*
@@ -61,8 +69,15 @@ itens "Lilica" e "Matilda";
 - Exiba a "dogNames" no console.
 */
 
+const maleDogNames = []
+maleDogNames.push("chico", "zeca", )
 
+const femaleDogNames = []
+femaleDogNames.push("lilica" , "matilde")
 
+const dogNames = maleDogNames.concat(femaleDogNames)
+
+console.log(dogNames)
 /*
 07 - Comente o console.log acima e:
 
@@ -72,7 +87,7 @@ itens "Lilica" e "Matilda";
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-
+console.log(dogNames.join(", "))
 
 /*
 08 - Comente o console.log acima e:
@@ -86,6 +101,8 @@ utilizando o método adequado para isso;
 - O console deve continuar exibindo o último item do array, que  
 agora é "Lilica".
 */
+console.log(dogNames[dogNames.length-1])
+
 
 
 
@@ -101,8 +118,12 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Exiba a "initials" no console.
 */
 
+dogNames.push("nina");
+console.log(dogNames)
 
+const inicials = `${dogNames[0][0]}${dogNames[1][0]}`
 
+console.log(inicials)
 /*
 10 - Comente o console.log acima e:
 
@@ -110,7 +131,7 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Utilize o método adequado para isso.
 */
 
-
+console.log(inicials.toLowerCase)
 
 /*
 11 - Comente o console.log acima e:
