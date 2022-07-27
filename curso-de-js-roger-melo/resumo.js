@@ -107,3 +107,6 @@ console.log(arraysSum)
 //oque foi feito : dentro de cada array I incremente um intem J ate houver i 
 
 
+ //   || ou && e
+
+// break  para parar um loop 
