@@ -6,6 +6,28 @@
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
+let multiply = function (number1=0,number2=0) {
+  let result = number1*number2
+return result
+}
+
+const valor = multiply(3,7)
+//console.log(valor)
+
+
+let saldoDiario = function (taxas,diaria){
+    let soma = taxas+diaria ;
+    return soma
+}
+
+
+taxas =38;
+diaria = 40;
+
+
+let total = saldoDiario(taxas,diaria)
+//console.log(total)
+
 
 /*
   02
@@ -28,6 +50,15 @@
   "Esta é a Xª vez que essa string é exibida."
 */
 
+let log = function (value = 'voce deve receber um valor como argumento') {
+ // console.log(value)
+}
+      // for (let i = 0; i <7; i++) {
+      //   console.log(`Esta é a ${i+1} vez que essa string é exibida.`)
+      // }
+
+
+
 /*
   04
 
@@ -40,6 +71,21 @@
 */
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
+
+let transform = function (array =[]){
+  let newArray = []
+  let wordUperCase =  newArray.push
+
+  for (let i = 0; i < array.length; i++) {
+   wordUperCase(array[i].toUpperCase())
+  }
+
+return newArray
+
+}
+
+log(transform())
+
 
 /*
   05
@@ -54,6 +100,29 @@ const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influenc
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
+let positNumbers = 0
+let negativNumbers = 0
+
+const isPositive = function (number = 0){    // função que verifica se e positivo
+  return number >= 1 
+}
+
+for (let i = 0; i < randomNumbers.length; i++) {  
+    if (isPositive(randomNumbers[i])) {    // sefor  positivo icrementar o positivNumbers
+      positNumbers ++
+    }else{
+      negativNumbers++         // senao icrementar NegativNumbers
+    }
+  
+}
+
+
+
+//console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positNumbers} positivos e ${negativNumbers} negativos.`)
+
+
+
+
 /*
   06
 
@@ -63,11 +132,23 @@ const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
   - Exiba o novo array no console, sem inserir um console.log() dentro da  
     função.
 */
+ 
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+const getOddNumbers = function (number = []) {
+  let novoArray =[] 
+
+  for (let j = 0; j < number.length; j++) {
+    if (number[j] %2 !== 0) {
+      novoArray.push(number[j])
+    }
+  }return novoArray
+}
+
+console.log(getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]))
+   
 
 /*
-  07
+  07 
 
   - Forme uma frase com o array abaixo e exiba-a no console.
 */
@@ -102,3 +183,13 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+
+let texto = ''
+
+for (let i = 0; i < functions.length; i++) {
+  const string = `${functions[i]()} `
+
+  texto += string
+}
+
+console.log(texto)
