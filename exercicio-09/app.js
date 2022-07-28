@@ -17,12 +17,21 @@ function convertToString (value) {
   return String(value)
 }
 
+const valores = value => String(value)
+
+console.log(valores(true))
+
+
 /*
   02
 
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
+
+const count = (string) => string.length
+
+console.log(count('texto adicionado no capitulo 11 '))
 
 /*
   03
@@ -34,12 +43,20 @@ function convertToString (value) {
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
+const pascoa = "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO" ;
+
+let conversao = value => value.toLowerCase()
+console.log(conversao(pascoa))
+
 /*
   04
 
   - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
+
+const  retorno = (caracterer, string) => string.indexOf(caracterer) // qual a posição do caractere 
+console.log(retorno('1', '1568723'))   
 
 /*
   05
@@ -48,26 +65,36 @@ function convertToString (value) {
     passado por argumento existe no array (também passado por argumento).
 */
 
+const itemEstaIncluido = (item,array) => array.includes(item)  // verifica se existe dentro do array 
+
+console.log(itemEstaIncluido(0,[3,5,7,3,0]))
+ 
 /*
   06
 
   - Crie uma função que retorna a concatenação de 2 arrays, passados como  
     argumentos em sua invocação;
 */
+const juntarArrays = (array1,array2) => array1.concat(array2) // concat juntando dois arrays
+texto1 = [02,03,55,44,05,63]
+texto2 = ["cachorro", "limao", "cavalo"]
 
+console.log(juntarArrays(texto2,texto1))
 /*
   07
 
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
+const whitoutLastone = (array) => array.slice(0,array.length-1) // slice removendo o ultimo indice do array 
 
+console.log(whitoutLastone([05,07,03,05]))
 /*
   08
 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
-*/
+*/ 
 
 /*
   09
