@@ -4,6 +4,7 @@
   - Declare uma constante que recebe o seu nome;
   - Ela deve ter um escopo global.
 */
+const Nome = 'hugo',
 
 /*
   02
