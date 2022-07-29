@@ -10,6 +10,17 @@
   - Exiba o objeto no console.
 */
 
+ let cat = {
+    nome:'gato',
+    age:'idade',
+    color:'cor',
+    bestFriend:['cachorro','papagaio','joao'],
+    sound:function(){
+      console.log("miauu")
+    }
+ }
+
+console.log(cat)
 /*
   02
 
@@ -18,6 +29,9 @@
 
   Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "X", "age", que recebeu "X", "color", que recebeu "X", "bestFriends", que recebeu um array com os itens "X" e "X", e "sound", que recebeu uma função que retorna "X".
 */
+
+console.log('Até aqui, o objeto "cat" possui as seguintes propriedades e valores: `${cat.nome}`, que recebeu "X", "age", que recebeu "X", "color", que recebeu "X", "bestFriends", que recebeu um array com os itens "X" e "X", e "sound", que recebeu uma função que retorna "X".')
+
 
 /*
   03
