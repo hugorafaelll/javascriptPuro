@@ -1,11 +1,5 @@
-/*
-  01
-
-  - Faça com que o texto do h1 do index.html seja exibido com todas as letras  
-    maiúsculas.
-*/
-
-
+const titulo = document.querySelector('h1');
+titulo.textContent =titulo.textContent.toUpperCase();
 
 /*
   02
@@ -16,6 +10,14 @@
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
 
+const lista = document.querySelector('.numbers')  //forEach para iterar dentro da ul
+
+const criarLista = number =>{
+    lista.innerHTML += `<li class="number">${number}</li>`
+}
+
+numbers.forEach(criarLista)
+
 /*
   03
 
@@ -24,7 +26,14 @@ const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
     - Se o número é ímpar, exiba-o na cor "pink".
 */
 
+const itenLista = document.querySelector('.number')
 
+itenLista.forEach(item => {
+    const ePar = Number(item.textContent)%2 ===0 ;
+    if (ePar){
+        item.style.color ='red'
+    }
+});
 
 /*
   04

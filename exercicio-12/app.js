@@ -27,6 +27,20 @@ const best2019Movies = [
   { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
 ]
 
+
+let filmes = 'Segundo o site Omelete, os melhores filmes de 2019 são:'
+
+best2019Movies.forEach( movie => {
+  filmes+=`  
+  - ${movie.title}, dirigido por ${movie.directedBy}`
+})
+
+console.log(filmes)
+
+
+
+
+
 /*
   02
 
@@ -59,8 +73,17 @@ const youtubeUser = {
       gitHub: 'https://github.com/Roger-Melo'
     },
     country: 'Brasil'
+  },
+  mensagemIntro  ()  {
+    console.log (`Vídeos recentes de ${this.name}:`);
+    this.videos.recentVideos.forEach(video =>{
+      console.log(video.title)
+
+    })
   }
 }
+
+youtubeUser.mensagemIntro()
 
 /*
   03
