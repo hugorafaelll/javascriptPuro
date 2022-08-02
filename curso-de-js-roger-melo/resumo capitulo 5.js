@@ -51,4 +51,7 @@ const paragrafo = document.querySelector('p')  // vai selecionar o primeiro para
 //document.createElement('li')  on
 // ul.append(li)   cria um item no final da lista do UL
 // ul.prepend(li) cria um item no inicio da lista do UL 
- 
+//event.stopPropagation evitar que o evento se propague para o elemento pai  nao e uma boa pratica 
+
+//
+
