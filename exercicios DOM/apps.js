@@ -1,6 +1,8 @@
 const titulo = document.querySelector('h1');
 titulo.textContent =titulo.textContent.toUpperCase();
 
+console.log(titulo.innerHTML)
+
 /*
   02
 
@@ -13,7 +15,7 @@ const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
 const lista = document.querySelector('.numbers')  //forEach para iterar dentro da ul
 
 const criarLista = number =>{
-    lista.innerHTML += `<li class="number">${number}</li>`
+    lista.innerHTML += `<li class="valores">${number}</li>`
 }
 
 numbers.forEach(criarLista)
@@ -26,14 +28,23 @@ numbers.forEach(criarLista)
     - Se o número é ímpar, exiba-o na cor "pink".
 */
 
-const itenLista = document.querySelector('.number')
+const lis = document.querySelectorAll('.valores')
 
-itenLista.forEach(item => {
-    const ePar = Number(item.textContent)%2 ===0 ;
-    if (ePar){
-        item.style.color ='red'
-    }
-});
+lis.forEach(item => {
+
+  const ePar = Number(item.textContent)%2 ===0
+
+
+ if(ePar){   // se atennder o ePAR entra dentro deste if 
+  item.style.color='red'
+  return  // e para neste return 
+ }
+
+ item.style.color ='gray' // se o if der negativo aplica diretamente este style
+
+  
+})
+
 
 /*
   04
@@ -43,8 +54,8 @@ itenLista.forEach(item => {
   P.s: a classe "body-background" já está declarada no style.css.
 */
 
-
-
+const body = document.querySelector('body')
+body.classList.add('body-background')
 /*
   05
 
@@ -53,6 +64,10 @@ itenLista.forEach(item => {
     do link do index.html.
 */
 
+const link = document.querySelector('.link')
+
+link.setAttribute('href','https://github.com/roger-melo-treinamentos/curso-de-js-roger-mel')
+
 
 
 /*
@@ -60,7 +75,7 @@ itenLista.forEach(item => {
 
   - Exiba o novo valor do atributo href do link no console.
 */
-
+ console.log(link.getAttribute('href'))
 
 
 /*
