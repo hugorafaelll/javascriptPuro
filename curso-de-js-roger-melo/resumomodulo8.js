@@ -45,3 +45,15 @@ const vendaProdutos = products.map(produto =>{
 
 console.log(vendaProdutos)
 console.log(products)
+
+
+// FILTER 
+// diferente do map ele gera um novo array APENAS aguns itens do array original 
+// quais itens atendem a especificação da função
+// sempre retornando um bolean 
+
+const randomNumbers = [ 36,55,47,52,62,22,18,32]
+
+const maiorque37 = randomNumbers.filter(item =>item>22)
+
+console.log(maiorque37)
