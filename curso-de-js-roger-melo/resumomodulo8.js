@@ -57,3 +57,37 @@ const randomNumbers = [ 36,55,47,52,62,22,18,32]
 const maiorque37 = randomNumbers.filter(item =>item>22)
 
 console.log(maiorque37)
+
+
+//REDUCE 
+//BASEADO NO ARRAY ORIGINAL EXECUTA UMA FUNÇÃO PARA CADA ARGUMENTO REDUZUZINDO ELE EM ALGUM TIPO DE DADO OU NOVO ARRAY 
+// GERA OUTPUT Q PODE NAO SER UM ARRAY  EX: OBJETO LITERAL STRING NUMERO OU ATE UM NOVO ARRAY 
+// REDUZIR ESTE ARRAY A UM UNICO VALOR POR EXEMPLO 
+// SEMPRE RETORNA UM VALOR E CADA VEZ Q ELE E RETORNADO O ACUMULATOR SOMA 
+
+const lista = [5,3,4,7,8,5,6,2,3]
+
+const sumResults = lista.reduce((acumulator,item)=> acumulator+item, 0 ) // zero parametro inicial 
+console.log(sumResults)
+
+const resultadoTaxas = [
+    {nome:'hugo', taxa:7},
+    {nome:'luis', taxa:11},
+    {nome:'hugo', taxa:3},
+    {nome:'hugo', taxa:7},
+    {nome:'lucas', taxa:5},
+    {nome:'hugo', taxa:7},
+    {nome:'hugo', taxa:4},
+    {nome:'pedro', taxa:3},
+    {nome:'hugo', taxa:7},
+    {nome:'hugo', taxa:9}
+]
+
+const taxasHugo = resultadoTaxas.reduce((accumulator ,resultadoTaxas) =>{
+    if(resultadoTaxas.nome === 'luis'){
+        accumulator+=resultadoTaxas.taxa
+    }
+    return accumulator
+},0)
+
+    console.log(taxasHugo)

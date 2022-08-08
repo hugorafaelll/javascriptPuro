@@ -7,6 +7,10 @@
 
 const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 
+const numerosPrimos = randomNumbers.filter(item => item % 2 === 1)
+
+console.log(numerosPrimos)
+
 /*
   02
 
@@ -14,6 +18,25 @@ const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
 */
 
 const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
+
+const underfive = crazyNumbers.filter(item => item <501)
+
+
+const sums = crazyNumbers.reduce((acumulador,crazyNumbers) =>{
+  if(crazyNumbers<501){
+    acumulador+=1
+  }
+  return acumulador
+},0)
+
+
+
+console.log(underfive)
+console.log(sums)
+
+
+
+
 
 /*
   03
@@ -23,6 +46,11 @@ const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
 */
 
 const numbers = [5, 7, 3]
+
+const overTwo = numbers.map(argumento =>  argumento**2
+)
+
+console.log(overTwo)
 
 /*
   04
@@ -48,6 +76,12 @@ const cart = [
   - Nome 2
   - Nome 3
 */
+
+const cartName = cart.reduce((acumulador,produto) =>{
+  return `${acumulador} ${produto.name}  \n`
+}, '')
+
+console.log(cartName)
 
 /*
   05
