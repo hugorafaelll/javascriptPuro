@@ -78,7 +78,7 @@ const cart = [
 */
 
 const cartName = cart.reduce((acumulador,produto) =>{
-  return `${acumulador} ${produto.name}  \n`
+  return `${acumulador} - ${produto.name}  \n`
 }, '')
 
 console.log(cartName)
@@ -104,6 +104,9 @@ const tarantinoMovies = [
   { name: 'Kill Bill: Volume 1', release: 2003 }
 ]
 
+const under2000 = tarantinoMovies.filter(tarantinoMovie =>  tarantinoMovie.release < 2000)
+ 
+console.log(under2000)
 /*
   06
 
@@ -121,6 +124,17 @@ const tvShows = [
   { name: 'Watchmen', releaseYear: 2019 }
 ]
 
+
+const reduzidoTvNames = tvShows.map(tvShow => tvShow.name)
+
+
+
+const tvNames = tvShows.reduce((acumulador,produto) =>{
+  return `${acumulador} - ${produto.name}  \n`
+}, '')
+
+console.log(reduzidoTvNames)
+console.log(tvNames)
 /*
   07
 

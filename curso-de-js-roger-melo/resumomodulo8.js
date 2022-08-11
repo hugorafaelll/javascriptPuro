@@ -83,11 +83,57 @@ const resultadoTaxas = [
     {nome:'hugo', taxa:9}
 ]
 
+const nomeMotoboy = 'hugo'
+
 const taxasHugo = resultadoTaxas.reduce((accumulator ,resultadoTaxas) =>{
-    if(resultadoTaxas.nome === 'luis'){
+    if(resultadoTaxas.nome === nomeMotoboy){
         accumulator+=resultadoTaxas.taxa
     }
     return accumulator
 },0)
 
     console.log(taxasHugo)
+
+    // resumo :
+    // reduce se passar pela condição ele  transforma um array em um resultado pode ser string bolean numero
+
+    //methodo sort 
+    //ordenar os itens de um array 
+    // modifica o array original  
+
+
+    const ponto = [10,5,3,2,55,44,25,22,2,1,33,47]
+
+ponto.sort((score1,score2) => score2-score1) // ordenando do maior para o menor
+
+console.log(ponto)
+
+// exemplo 02 
+
+const gameResult = [
+    {nome:'luis',pontuação:23},
+    {nome:'lucas',pontuação:27},
+    {nome:'joao',pontuação:33},
+    {nome:'andre',pontuação:120},
+    {nome:'pedro',pontuação:57},
+    {nome:'paulo',pontuação:51},
+    {nome:'felipe',pontuação:50},
+    {nome:'jose',pontuação:83},
+    {nome:'joel',pontuação:0},
+    {nome:'jonas',pontuação:157},
+]
+
+gameResult.sort((item1, item2) => item1.pontuação-item2.pontuação)
+console.log(gameResult)
+
+
+debugger
+
+// ENCADEAMENTO DE METODOS DE ARRAY 
+
+const bestResults = gameResult
+.filter(pontos => pontos.pontuação >50)
+.map(pontos => `a pontuação do jogador${pontos.nome} e de ${pontos.pontuação} pontos`)
+
+
+console.log(bestResults)
