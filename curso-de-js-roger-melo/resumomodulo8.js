@@ -127,13 +127,14 @@ gameResult.sort((item1, item2) => item1.pontuação-item2.pontuação)
 console.log(gameResult)
 
 
-debugger
+
 
 // ENCADEAMENTO DE METODOS DE ARRAY 
 
+
 const bestResults = gameResult
-.filter(pontos => pontos.pontuação >50)
-.map(pontos => `a pontuação do jogador${pontos.nome} e de ${pontos.pontuação} pontos`)
+.filter(score => score.pontuação >50)
+.map(score => `a pontuação do jogador  ${score.nome} é de ${score.pontuação} score`)
 
 
 console.log(bestResults)
