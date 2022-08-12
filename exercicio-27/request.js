@@ -18,7 +18,7 @@ const exercicioFakeApi = callback => {
                         
                                 if (isRequestNOTok){
                                     callback('nao foi possivel obter dados desta API', null)
-                                   
+                                    
                                 }
                 
     })

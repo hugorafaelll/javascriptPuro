@@ -6,12 +6,12 @@
   <title>Exercício 27</title>
 </head>
 <body>
-  <h1>CALL BACK FUNCTION </h1>
+  <h3>CALL BACK FUNCTION </h3>
   <P>PARAMETRO QUE PODE SER INVOCADO AGORA E LIDO DEPOIS </P>
   <H2>JSON </H2>
   <P>OBJETO QUE PODE SER ENVIADO PARA BASE DE DADOS EM FORMA DE TEXTO </P>
 
-
+<div id="metodo">
   <H3>new XMLHttpRequest() </H3>
   <P>REQUISIÇÃO PARA ACESSAR O API OU BASE DE DADOS EM FORMATO JSON</P>
 
@@ -23,16 +23,34 @@
 
   <h6>resultado do que foi solicitado na url da constatnte request que passa por uma condicional if onde verifica se o processo chegou em 4 "pronto para uso" e o status e 200 </h6>
 
-<h1>promisses</h1>
+<h3>promisses</h3>
 <p>sucesso ou a falha de uma função assincrona</p>
-<p> .then()  methodo para consumir uma promisse   </p>
+<p> .then()  methodo para consumir o sucesso de uma promisse   </p>
 <p>
+
+
+</div>
   exercicioFakeApi() <br>
       .then() dados <br>
-      .catch() resultado do erro
+      .catch() resultado do erro de uma promisse
 </p>
 <br>
 <br>
+
+
+<h3>Fetch API </h3>
+<p>fetch = buscar <br>
+ <p>fetch('url') usa promisse debaixo dos panos </p>
+    <p>.then()  - resolved - trata o resultado quando o fetch  der certo  <br>
+      <p>.then() pode encadear varios um dentro do outro  - primeiro o methodo .json() , segundo .then() retorna o objeto json com o conteudo do fetch buscado</p>
+    .catch()   - reject - trata o erro do fetch</p></p>
+
+
+    <h3>async-awayt</h3> toda função async retorna uma promisse
+    <p>const getUsers = async () => {}     transformando uma função comun em uma função assincrona  retorna uma promisse<br>
+    const response = await  fetch('url')  - await so pode ser utilizado em funçoes async <br>
+     e vai aguardar carregar todo fetch e nenhum codigo abaixo da linha do await sera executado <br>
+      const users = await response.json()</p>
 
   <!-- <script src="./app.js"></script> -->
   <script src="./request.js"></script>
