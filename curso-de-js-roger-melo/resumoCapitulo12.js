@@ -67,4 +67,4 @@ exemplo :
 
 //  prototype onde ficao as espeficiaçoes de um objeto/ array 
 
-// evitar criar objetos  com funçoes colocar as funçoes no prototype e chamalas no objeto 
+// evitar criar objetos  com funçoes colocar as funçoes no prototype e chamalas no objeto  
